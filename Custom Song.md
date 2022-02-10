@@ -90,75 +90,81 @@ live_loop :bass do
   sleep 1
   play :a3
   sleep 0.5
-  play :e2
+  play :e3
   sleep 0.5
-  play :e2
-  sleep 0.5
-  play :a3
-  sleep 1
-  play :a2
-  sleep 0.5
-  play :a2
+  play :e3
   sleep 0.5
   play :a3
   sleep 1
   play :a2
   sleep 0.5
+  play :a2
+  sleep 0.5
+  play :a3
+  sleep 1
+  play :a2
+  sleep 0.5
   play :a3
   sleep 0.5
-  play :g2
+  play :g3
   sleep 0.5
-  play :e2
+  play :e3
   sleep 0.5
-  play :d2
+  play :d3
   sleep 0.5
-  play :c2
-  sleep 1
   play :c3
+  sleep 1
+  play :c4
   sleep 0.5
   play :a2
   sleep 0.5
   play :a2
   sleep 0.5
-  play :c3
+  play :c4
   sleep 1
-  play :c2
-  sleep 0.5
-  play :c2
+  play :c3
   sleep 0.5
   play :c3
+  sleep 0.5
+  play :c4
   sleep 1
-  play :c2
+  play :c3
   sleep 0.5
   play :af2
   sleep 0.5
   play :a3
   sleep 0.5
-  play :g2
+  play :g3
   sleep 0.5
-  play :e2
+  play :e3
   sleep 0.5
-  play :d2
+  play :d3
   sleep 0.5
   play :a2
   sleep 1
   play :f2
   sleep 0.5
-  play :c2
+  play :c3
   sleep 0.5
-  play :c2
-  sleep 0.5
-  play :f2
-  sleep 1
-  play :a2
-  sleep 0.5
-  play :f1
+  play :c3
   sleep 0.5
   play :f3
   sleep 1
-  play :f1
+  play :a2
   sleep 0.5
   play :f2
+  sleep 0.5
+  play :f3
+  sleep 1
+  play :f2
+  sleep 0.5
+  play :f3
+  sleep 0.5
+  play :e2
+  sleep 0.5
+  play :c2
+  sleep 0.5
+  play :c2
   sleep 0.5
   stop
 end
