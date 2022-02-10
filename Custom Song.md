@@ -162,9 +162,15 @@ live_loop :bass do
   sleep 0.5
   play :e2
   sleep 0.5
-  play :c2
+  play :b2
   sleep 0.5
-  play :c2
+  play :a2
+  sleep 0.5
+  play :b2
+  sleep 0.5
+  play :g2
+  sleep 0.5
+  play :g2
   sleep 0.5
   stop
 end
