@@ -1,0 +1,88 @@
+use_bpm 136
+use_synth :piano
+
+define :es do
+  play:E4
+  sleep 1
+  play:E5
+  play:Gs4
+  sleep 2
+  play:E5
+  play:Gs4
+  sleep 1
+end
+
+define :tea do
+  sleep 1
+  play:E5
+  play:Gs4
+  play:B4
+  sleep 1
+  play:B4
+  sleep 1
+  play:E5
+  play:Gs4
+  sleep 1
+end
+
+define :you do
+  play:B4
+  sleep 0.75
+  play:As4
+  sleep 0.25
+  play:Gs4
+  play:B4
+  sleep 0.75
+  play:Cs5
+  sleep 0.25
+  play:B4
+  sleep 1
+  play:Gs4
+  play:E5
+  sleep 1
+end
+
+live_loop:background_notes do
+  3.times do
+    play:E3, amp: 0.25
+    sleep 1
+    play:B3, amp: 0.25
+    play:E4, amp: 0.25
+    sleep 1
+    play:B3, amp: 0.25
+    sleep 1
+    play:E4, amp: 0.25
+    sleep 1
+  end
+  
+  5.times do
+    play:E3, amp: 1
+    sleep 1
+    play:B3, amp: 1
+    play:E4, amp: 1
+    sleep 1
+    play:B3, amp: 1
+    sleep 1
+    play:E4, amp: 1
+    sleep 1
+  end
+  stop
+end
+
+# Measure 1
+sleep 1
+es
+# Measure 2
+es
+# Measure 3
+es
+# Measure 4
+tea
+# Measure 5
+you
+# Measure 6
+tea
+# Measure 7
+you
+# Measure 8
+es
