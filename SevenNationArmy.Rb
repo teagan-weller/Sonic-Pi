@@ -8,7 +8,7 @@ live_loop :white_stripes do
   8.times do
     play (gayNotes[agenda])
     sleep (gayAgenda[agenda])
-    index = index +1
+    agenda = agenda +1
   end
   agenda = 0
 end
