@@ -1,0 +1,120 @@
+#Head Over Heels
+rollie = "C:/Users/teagan_weller/Documents/Audacity/Polly-Olly.wav"
+x= 0
+y= 0.25
+z = 1
+use_bpm 100
+use_synth :piano
+use_synth_defaults amp: 2
+
+
+define :rawr do
+  play :r
+  sleep 1
+end
+
+define :weirdo do |n,s|
+  play n+60
+  play n+72
+  sleep s
+end
+
+Notes = [0 , "a4", "e5","d5","cs5", "a4", "g5", "a5", "b5", "g5", 0]
+Notes2 = [0 , "a4", "e5","d5", "cs5", "a4", "e5","a4"]
+Notes3 = ["a4","a4","e5","e5","d5", "cs5","e5","a4","a4","a4"]
+index = 0
+
+weirdo 7, 1
+weirdo 5, 0.5
+weirdo 4, 0.5
+weirdo 2, 1
+weirdo 4, 0.5
+weirdo 0, 0.5
+
+weirdo 0, 0.5
+weirdo 7, 0.5
+weirdo 5, 0.5
+weirdo 4, 0.5
+weirdo 2, 0.5
+weirdo 4, 0.5
+weirdo 0, 1
+
+live_loop :bass do
+  12
+  .times do
+    sample :drum_bass_soft
+    sleep 1
+  end
+  stop
+end
+
+live_loop :cymbal do
+  10.times do
+    sleep 1
+    sample :drum_cymbal_closed
+  end
+  stop
+end
+
+live_loop :heavy do
+  2.times do
+    sleep 4
+    sample :drum_heavy_kick
+  end
+  stop
+end
+
+live_loop :theme1 do
+  11.times do
+    play (Notes[index])
+    sleep 0.5
+    index = index +1
+  end
+  index = 0
+  stop
+end
+
+rawr
+rawr
+
+live_loop :theme2 do
+  8.times do
+    play (Notes2[index])
+    sleep 0.5
+    index = index +1
+  end
+  index = 0
+  stop
+end
+
+
+live_loop:switch do
+  9.times do
+    sample :bass_hit_c
+    sleep 2
+  end
+  stop
+end
+
+rawr
+rawr
+
+live_loop :theme3 do
+  10.times do
+    play (Notes3[index])
+    sleep 0.5
+    index = index +1
+  end
+  index = 0
+  stop
+end
+
+sleep 12
+
+4.times do
+  sample rollie, start: x, finish: y, amp: z
+  x = x + 0.25
+  y = y + 0.25
+  sleep 8
+  z = z - 0.25
+end
